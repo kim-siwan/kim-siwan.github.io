@@ -11,8 +11,8 @@ main:
   - title: "CV"
     url: /files/CV_SIWANKIM_2025_Fall.pdf
 
-  # - title: "Research"
-  # url: /publications/
+  - title: "Research"
+    url: /publications/
 
   # title: "Talks"
   # url: /talks/    
