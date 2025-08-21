@@ -13,8 +13,8 @@ title                    : "SIWAN KIM"
 title_separator          : "-"
 name                     : &name "SIWAN KIM"
 description              : &description "PhD Student @UVA Data Science"
-url                      : "https://kimux0103.github.io" # the base hostname & protocol for your site e.g. "https://[your GitHub username].github.io" or if you already have some other page hosted on Github then use "https://[your GitHub username].github.io/[Your Repo Name]"
-baseurl                  : "/siwankim.github.io"
+url                      : "https://kim-siwan.github.io"  # the base hostname & protocol for your site e.g. "https://[your GitHub username].github.io" or if you already have some other page hosted on Github then use "https://[your GitHub username].github.io/[Your Repo Name]"
+baseurl                  : ""
 repository               : "academicpages/academicpages.github.io"
 
 # Site Author - The following control what appear as part of the author content on the side bar.
