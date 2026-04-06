@@ -1,0 +1,248 @@
+---
+layout: none
+---
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Siwan Kim</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Covered+By+Your+Grace&family=DM+Sans:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --snow:   #F5F4ED;
+      --mist:   #ECECDC;
+      --aqua:   #A0C9CB;
+      --orange: #FF6037;
+      --ink:    #351E1C;
+      --garnet: #733635;
+      --bg:     #1C1410;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    html, body {
+      height: 100%;
+    }
+
+    body {
+      background: var(--bg);
+      color: var(--snow);
+      font-family: "DM Sans", system-ui, sans-serif;
+      font-size: 15px;
+      line-height: 1.6;
+    }
+
+    /* ── TWO-COLUMN LAYOUT ── */
+    .page {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      min-height: 100vh;
+    }
+
+    /* ══════════════════════════
+       LEFT — SVG background
+    ══════════════════════════ */
+    .left-col {
+      background-image: url('/assets/background.svg');
+      background-size: cover;
+      background-position: left center;
+      background-repeat: no-repeat;
+      min-height: 100vh;
+    }
+
+    /* Responsive: hide left column when cards would start getting obscured */
+    @media (max-width: 900px) {
+      .page {
+        grid-template-columns: 1fr;
+      }
+      .left-col {
+        display: none;
+      }
+    }
+
+    /* ══════════════════════════
+       RIGHT — bio + news
+    ══════════════════════════ */
+    .right-col {
+      padding: 3.5rem 3rem 3.5rem 2.5rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      max-width: 540px;
+    }
+
+    .name-heading {
+      font-family: "Covered By Your Grace", cursive;
+      font-size: clamp(3rem, 6vw, 4.5rem);
+      font-weight: 400;
+      color: var(--snow);
+      line-height: 1;
+      margin-bottom: 1rem;
+    }
+
+    .profile-links {
+      display: flex;
+      gap: 32px;
+      align-items: center;
+      margin-bottom: 1.6rem;
+    }
+
+    .profile-links a {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      padding: 7px 7px 7px 0;
+      font-family: "DM Sans", sans-serif;
+      font-weight: 500;
+      font-size: 18px;
+      letter-spacing: -0.005em;
+      color: #F5F4ED;
+      text-decoration: none;
+      transition: opacity 0.15s;
+    }
+    .profile-links a:hover { opacity: 0.7; }
+    .profile-links a span {
+      text-decoration: underline;
+      text-decoration-skip-ink: none;
+    }
+    .profile-links svg { flex-shrink: 0; }
+
+    .bio {
+      margin-bottom: 2rem;
+    }
+    .bio p {
+      font-size: 0.9rem;
+      line-height: 1.65;
+      color: #F5F4ED;
+      margin-bottom: 0.8rem;
+    }
+    .bio p:last-child { margin-bottom: 0; }
+
+    /* Orange underline links — same text color, only underline is #FF6037 */
+    .link-orange {
+      color: inherit;
+      text-decoration: underline;
+      text-decoration-color: #FF6037;
+      text-underline-offset: 3px;
+    }
+    .link-orange:hover { text-decoration-color: var(--snow); }
+
+    /* News */
+    .news-heading {
+      font-size: 1rem;
+      font-weight: 600;
+      color: var(--snow);
+      margin-bottom: 1rem;
+      letter-spacing: 0.01em;
+    }
+
+    .news-list { list-style: none; }
+
+    .news-item {
+      display: grid;
+      grid-template-columns: 5.5rem 1fr;
+      gap: 0.4rem;
+      padding: 0.5rem 0;
+      border-top: 1px solid rgba(245, 244, 237, 0.15);
+      align-items: start;
+    }
+    .news-item:last-child { border-bottom: 1px solid rgba(245, 244, 237, 0.15); }
+
+    .news-date {
+      font-size: 0.78rem;
+      font-weight: 600;
+      color: var(--orange);
+      padding-top: 0.05rem;
+      white-space: nowrap;
+    }
+
+    .news-text {
+      font-size: 0.85rem;
+      color: #F5F4ED;
+      line-height: 1.5;
+    }
+
+    /* ── MOBILE ── */
+    @media (max-width: 900px) {
+      .right-col { padding: 2rem 1.5rem 3rem; max-width: 100%; }
+    }
+  </style>
+</head>
+<body>
+
+<div class="page">
+
+  <!-- ══ LEFT: SVG background ══ -->
+  <div class="left-col"></div>
+
+  <!-- ══ RIGHT: bio + news ══ -->
+  <div class="right-col">
+
+    <h1 class="name-heading">Siwan Kim</h1>
+
+    <div class="profile-links">
+      <a href="https://www.linkedin.com/in/kimux0103" target="_blank" rel="noopener noreferrer">
+        <span>LinkedIn</span>
+        <svg width="26" height="26" viewBox="0 0 35 35" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <path d="M9 26L26 9M26 9H13M26 9V22" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </a>
+      <a href="https://datascience.virginia.edu/people/siwan-kim">
+        <span>Contact</span>
+        <svg width="26" height="26" viewBox="0 0 35 35" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <path d="M9 26L26 9M26 9H13M26 9V22" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </a>
+    </div>
+
+    <div class="bio">
+      <p>
+        Hi, I'm a first-year PhD student in the
+        <a class="link-orange" href="https://datascience.virginia.edu/">School of Data Science at the University of Virginia</a>.
+        I'm advised by
+        <a class="link-orange" href="https://nuryildirim.github.io/">Dr. Nur Yildirim</a>
+        in <a class="link-orange" href="https://humanaidesign.org/">Human+AI Design Lab</a>.
+      </p>
+      <p>
+        My research focus is human-centered AI and AI literacy in the workplace.
+        I would like to approach HCI research drawing on my industry experience
+        as a UX designer and interdisciplinary academic background.
+      </p>
+    </div>
+
+    <p class="news-heading">News</p>
+
+    <ul class="news-list">
+      <li class="news-item">
+        <span class="news-date">Apr 2026</span>
+        <span class="news-text">✈️ Attending CHI '26 as a student volunteer and presenting a position paper at the Workshop on Data Literacy.</span>
+      </li>
+      <li class="news-item">
+        <span class="news-date">Feb 2026</span>
+        <span class="news-text">🏁 Served as a judge at Hack to the Beat 2026, hosted at UVA.</span>
+      </li>
+      <li class="news-item">
+        <span class="news-date">Feb 2026</span>
+        <span class="news-text">🎙 Delivered a talk on human-centered design and an introduction to Figma.</span>
+      </li>
+      <li class="news-item">
+        <span class="news-date">Jan 2026</span>
+        <span class="news-text">🌱 Co-founded Human Design Data, the first design-focused community within the School of Data Science.</span>
+      </li>
+      <li class="news-item">
+        <span class="news-date">Aug 2025</span>
+        <span class="news-text">🎓 Started my PhD at the University of Virginia, School of Data Science.</span>
+      </li>
+      <li class="news-item">
+        <span class="news-date">Jan 2025</span>
+        <span class="news-text">📖 Published Starting Figma Today.</span>
+      </li>
+    </ul>
+
+  </div>
+</div>
+
+</body>
+</html>
