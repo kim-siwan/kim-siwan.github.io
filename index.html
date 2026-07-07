@@ -205,26 +205,6 @@
       margin-bottom: 1.2rem;
     }
 
-    /* Experience list */
-    .xp-list { list-style: none; }
-    .xp {
-      display: grid;
-      grid-template-columns: 1fr auto;
-      gap: 1rem;
-      align-items: baseline;
-      padding: 1rem 0;
-      border-top: 1px solid var(--ink-15);
-    }
-    .xp:last-child { border-bottom: 1px solid var(--ink-15); }
-    .xp-org { font-weight: 600; font-size: 1rem; }
-    .xp-desc { font-size: 0.9rem; color: var(--ink-60); margin-top: 0.1rem; }
-    .xp-date {
-      font-size: 0.8rem;
-      font-weight: 500;
-      color: var(--ink-40);
-      white-space: nowrap;
-    }
-
     /* News list */
     .news-list { list-style: none; }
     .news-item {
@@ -244,29 +224,6 @@
       padding-top: 0.1rem;
     }
     .news-text { font-size: 0.9rem; color: var(--ink); }
-
-    /* ── FOOTER ── */
-    footer {
-      margin-top: 5rem;
-      padding: 2rem 0 2.5rem;
-      border-top: 1px solid var(--ink-15);
-    }
-    .foot-links { display: flex; gap: 1.6rem; margin-bottom: 1.4rem; flex-wrap: wrap; }
-    .foot-links a {
-      font-size: 0.9rem;
-      font-weight: 500;
-      text-decoration: none;
-    }
-    .foot-links a::before { content: "→ "; color: var(--orange); }
-    .foot-links a:hover { text-decoration: underline; text-decoration-color: var(--orange); }
-    .colophon {
-      font-size: 0.78rem;
-      color: var(--ink-40);
-      display: flex;
-      justify-content: space-between;
-      flex-wrap: wrap;
-      gap: 0.5rem;
-    }
 
     /* ── MOBILE ── */
     @media (max-width: 640px) {
@@ -428,48 +385,6 @@
     </div>
   </section>
 
-  <!-- ══ EXPERIENCE ══ -->
-  <section class="wrap block" id="experience">
-    <p class="block-heading">Experience</p>
-    <ul class="xp-list">
-      <li class="xp">
-        <div>
-          <div class="xp-org">Human+AI Design Lab, University of Virginia</div>
-          <div class="xp-desc">Researching AI literacy and human-centered AI in the workplace</div>
-        </div>
-        <span class="xp-date">2025 — Present</span>
-      </li>
-      <li class="xp">
-        <div>
-          <div class="xp-org">LG CNS</div>
-          <div class="xp-desc">Designing employee experiences for enterprise systems as a UX specialist</div>
-        </div>
-        <span class="xp-date">2022 — 2025</span>
-      </li>
-      <li class="xp">
-        <div>
-          <div class="xp-org">Motrex</div>
-          <div class="xp-desc">Prototyping next-generation digital cockpits for Hyundai Motor Company</div>
-        </div>
-        <span class="xp-date">2021</span>
-      </li>
-      <li class="xp">
-        <div>
-          <div class="xp-org">Amoeba UX Agency</div>
-          <div class="xp-desc">Designing a fully autonomous shuttle bus experience for children</div>
-        </div>
-        <span class="xp-date">2020</span>
-      </li>
-      <li class="xp">
-        <div>
-          <div class="xp-org">Author & Instructor</div>
-          <div class="xp-desc">Writing books on Figma, Photoshop, and Premiere Pro · teaching creative tools</div>
-        </div>
-        <span class="xp-date">2018 — Present</span>
-      </li>
-    </ul>
-  </section>
-
   <!-- ══ NEWS ══ -->
   <section class="wrap block" id="news">
     <p class="block-heading">News</p>
@@ -502,19 +417,6 @@
   </section>
 
 </main>
-
-<!-- ══ FOOTER ══ -->
-<footer class="wrap">
-  <div class="foot-links">
-    <a href="https://www.linkedin.com/in/kimux0103" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-    <a href="https://datascience.virginia.edu/people/siwan-kim" target="_blank" rel="noopener noreferrer">Contact</a>
-    <a href="/files/CV_SIWANKIM_2025_Fall.pdf" target="_blank" rel="noopener noreferrer">CV</a>
-  </div>
-  <div class="colophon">
-    <span>© Siwan Kim, 2026</span>
-    <span>Seoul → Charlottesville, still drawing the map</span>
-  </div>
-</footer>
 
 <script>
 (function () {
